@@ -8,6 +8,7 @@ def main():
     try:
         pygame.init()
         print('Starting asteroids!')
+        pygame.quit()
     except Exception as e:
         print(f'Failed to initialize Pygame: {e}')
 

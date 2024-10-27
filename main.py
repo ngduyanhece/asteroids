@@ -20,7 +20,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                return  # Exit the game loop if the user closes the window
+                return
+            elif event.type == pygame.KEYDOWN:
 
         # Fill the screen with black color (RGB: 0, 0, 0)
         screen.fill((0, 0, 0))

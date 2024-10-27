@@ -13,10 +13,13 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     
     # Start the game loop
+    clock = pygame.time.Clock()
     while True:
+        clock.tick(60) 
         # Event handling to check if the user wants to quit
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                pygame.quit()
                 return  # Exit the game loop if the user closes the window
 
         # Fill the screen with black color (RGB: 0, 0, 0)
@@ -24,6 +27,7 @@ def main():
 
         # Update the display
         pygame.display.flip()
+        pygame.time.delay(10)  # Add a small delay to reduce CPU usage
 
 if __name__ == "__main__":
     main()
